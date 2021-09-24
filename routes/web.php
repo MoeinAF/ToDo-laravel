@@ -24,4 +24,13 @@ Route::post('user/store', [\App\Http\Controllers\UserController::class, 'store']
     ->name('user.store');
 
 Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])
-    ->name('index');
+    ->name('user.index');
+
+Route::get('task/create', [\App\Http\Controllers\TaskController::class, 'create'])
+    ->name('task.create');
+
+Route::post('task/store', [\App\Http\Controllers\TaskController::class, 'store'])
+    ->name('task.store');
+
+Route::get('tasks', [\App\Http\Controllers\TaskController::class, 'index'])
+    ->name('task.index');

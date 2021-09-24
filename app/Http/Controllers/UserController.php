@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function create()
     {
-        return view('create');
+        return view('users.create');
     }
 
     public function store(Request $request)
@@ -21,14 +21,14 @@ class UserController extends Controller
             "password" => Hash::make($request->password)
         ]);
 
-        return redirect()->route('index')
+        return redirect()->route('users.index')
             ->with('name', $users->name);
     }
 
     public function index()
     {
         $users = User::all();
-        return view('index')
+        return view('users.index')
             ->with('users', $users);
     }
 }
