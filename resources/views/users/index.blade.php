@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Users')
+
 @section('content')
     @if(session('name'))
         <div class="alert alert-success"> Hello {{ session('name') }} </div>

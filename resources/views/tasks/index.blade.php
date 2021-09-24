@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Tasks')
+
 @section('content')
 
     <a href="{{ route('task.create') }}" class="btn btn-primary mt-4">Create Task</a>

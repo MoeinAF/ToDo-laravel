@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'CreateTask')
+
 @section('content')
     <form class="mb-4" method="post" action="{{ route('task.store') }}">
         @csrf

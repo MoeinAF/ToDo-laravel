@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'CreateUser')
+
 @section('content')
     <form class="mb-4" method="post" action="{{ route('user.store') }}">
         @csrf
