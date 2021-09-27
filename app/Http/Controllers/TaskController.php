@@ -30,7 +30,10 @@ class TaskController extends Controller
 
     public function index()
     {
+        $users = User::all();
         $tasks = Task::all();
-        return view('tasks.index', compact('tasks'));
+        return view('tasks.index')
+            ->with('tasks', $tasks)
+            ->with('users', $users);
     }
 }
